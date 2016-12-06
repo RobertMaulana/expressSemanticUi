@@ -1,0 +1,13 @@
+<% include partials/header %>
+
+<div class="ui container main">
+<h1>Welcome to my blog</h1>
+
+	<% data.forEach(function(datas){ %>
+		<h3><%= datas.title %></h3>
+		<img src="<%= datas.image %>" width="100px" height="100px">
+		<p><%= datas.body %></p>
+	<% }) %>
+</div>
+
+<% include partials/footer %>
