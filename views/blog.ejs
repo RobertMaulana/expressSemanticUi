@@ -6,7 +6,8 @@
 	<% data.forEach(function(datas){ %>
 		<h3><%= datas.title %></h3>
 		<img src="<%= datas.image %>" width="100px" height="100px">
-		<p><%= datas.body %></p>
+		<p><%= datas.body.substring(1, 100) %>...</p>
+		<a href="/blog/<%= datas._id %>">Read more</a>
 	<% }) %>
 </div>
 

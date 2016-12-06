@@ -48,6 +48,16 @@ app.post("/blog", function(req, res){
 	});
 });
 
+app.get("/blog/:id", function(req, res){
+	blog.findById(req.params.id, function(err, blogData){
+		if(err){
+			res.render("/blog");
+		}else{
+			res.render("single", {data: blogData});
+		}
+	});
+});
+
 app.listen(3000, function(){
 	console.log("Server has been connected!");
 });
